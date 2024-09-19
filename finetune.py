@@ -347,7 +347,7 @@ def train():
             model = prepare_model_for_kbit_training(
                 model, use_gradient_checkpointing=training_args.gradient_checkpointing
             )
-        print(f"lora_config:{lora_config}")
+        # print(f"lora_config:{lora_config}")
         model = get_peft_model(model, lora_config)
 
         if training_args.gradient_checkpointing:
