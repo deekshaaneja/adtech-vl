@@ -257,7 +257,7 @@ def make_supervised_data_module(
 def train():
     global local_rank
 
-    output_dir = "/root/data/qwen/output"
+    output_dir = "/root/data/qwen2_vl/output"
     parser = transformers.HfArgumentParser(
         (ModelArguments, DataArguments, TrainingArguments, LoraArguments)
     )
