@@ -324,7 +324,7 @@ def train():
         use_fast=False,
         trust_remote_code=True,
     )
-    tokenizer.pad_token_id = tokenizer.eod_id
+    # tokenizer.pad_token_id = tokenizer.eod_id
     tokenizer.pad_token_id = 151643
 
     if training_args.use_lora:
