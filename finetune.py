@@ -335,7 +335,7 @@ def train():
         lora_config = LoraConfig(
             r=lora_args.lora_r,
             lora_alpha=lora_args.lora_alpha,
-            target_modules=lora_args.lora_target_modules,
+            target_modules={'attention.q_proj', 'attention.k_proj', 'mlp.fc1', 'mlp.fc2'},
             lora_dropout=lora_args.lora_dropout,
             bias=lora_args.lora_bias,
             task_type="CAUSAL_LM",
