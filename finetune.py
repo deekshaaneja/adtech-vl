@@ -334,9 +334,9 @@ def train():
             modules_to_save = None
         else:
             modules_to_save = ["wte", "lm_head"]
-        print(f"model modules: {model.named_modules()}")
-        for name, module in model.named_modules():
-            print(name)
+        # print(f"model modules: {model.named_modules()}")
+        # for name, module in model.named_modules():
+        #     print(name)
         lora_config = LoraConfig(
             r=lora_args.lora_r,
             lora_alpha=lora_args.lora_alpha,
