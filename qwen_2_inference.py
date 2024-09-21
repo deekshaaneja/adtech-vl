@@ -14,15 +14,16 @@ args=parser.parse_args()
 
 def infer_new_model(url, q_list):
     responses = []
+    trained_model_path = "/home/ubuntu/deeksha/db-adtech-vl/qwen2_vl_model/output"
 
     # Load your fine-tuned model and processor
     model = Qwen2VLForConditionalGeneration.from_pretrained(
-        "/home/ubuntu/deeksha/db-adtech-vl/qwen2_vl_model/output",
+        trained_model_path,
         torch_dtype="auto",
         device_map="auto"
     )
-    processor = AutoProcessor.from_pretrained("/home/ubuntu/deeksha/db-adtech-vl/qwen2_vl_model/output")
-
+    processor = AutoProcessor.from_pretrained(trained_model_path)
+    print("processot loaded ====== ")
     # 1st dialogue turn
     for q in q_list:
         messages = [
