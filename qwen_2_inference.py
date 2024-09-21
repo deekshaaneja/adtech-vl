@@ -116,7 +116,7 @@ if __name__ == '__main__':
     print(f"******************************DEFAULT MODEL******************************************")
     print(infer(url, [q1, q2, q3]))
     print(f"*********************************NEW MODEL*******************************************")
-    print(infer(url, [q1, q2, q3]))
+    print(infer_new_model(url, [q1, q2, q3]))
 
 
 
