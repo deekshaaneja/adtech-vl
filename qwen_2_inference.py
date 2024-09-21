@@ -114,7 +114,7 @@ if __name__ == '__main__':
     q2 = "Give me the description (in 90 characters) for personalized advertisement"
     q3 = "Give me the keywords for advertisement of this product"
     print(f"******************************DEFAULT MODEL******************************************")
-    # print(infer(url, [q1, q2, q3]))
+    print(infer(url, [q1, q2, q3]))
     print(f"*********************************NEW MODEL*******************************************")
     print(infer_new_model(url, [q1, q2, q3]))
 
