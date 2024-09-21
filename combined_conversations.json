@@ -170,7 +170,558 @@
             {
                 "from": "assistant",
                 "value": "Dive deep into the world of Demandbase's technographics and intent data to empower your marketing and sales strategies. This guide will walk you through how to identify key technologies in use by your target accounts, understand their purchasing intent, and tailor your approach to foster engagement and drive conversions"
+            }]},
+    {
+        "id": "identity_greythr",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/greythr.jpg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "GreyHR adapts to your scale and complexity, helping you navigate the ever-evolving HR landscape with ease"
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "GreyHR: Empowering Your Workforce, Transforming Your Workplace!"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "GreyHR, the all-in-one HR management solution designed to streamline your HR processes and enhance employee engagement. Our innovative platform offers a suite of powerful tools to simplify everything from recruitment and onboarding to performance management and payroll."
+            }
+        ]
+    },
+    {
+        "id": "identity_adobe_cp",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/adobe_cp.jpg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "Adobe Captivate empowers you to create professional-grade eLearning experiences that resonate with your audience"
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "Elevate Your Learning Experience: Master Adobe Captivate Like a Pro!"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "Adobe Captivate is a powerful and intuitive eLearning authoring tool designed to bring your training and educational content to life. Whether you're a seasoned instructional designer or just starting your journey in eLearning, Captivate offers an array of innovative features that make it easy to create engaging, interactive, and responsive content."
+            }
+        ]
+    },
+    {
+        "id": "identity_seamless_ai",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/seamless_ai.jpg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "Seamless.AI empowers sales teams to achieve unparalleled efficiency and effectiveness in lead generation and customer engagement."
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "Seamless AI: Your Personal Assistant in a Smooth Digital World"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "Seamless.AI, the ultimate lead generation platform designed to supercharge your sales and marketing efforts. Seamless.AI leverages advanced artificial intelligence to provide you with accurate, real-time contact information and insights for millions of professionals and companies worldwide."
+            }
+        ]
+    },
+    {
+        "id": "identity_trend_micro",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/trend_micro.jpg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "Trend Micro Vision One empowers organizations to stay ahead of cyber threats and protect their critical assets with confidence."
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "Stay Ahead of Threats: Trend Micro Vision One Delivers Next-Level Security!"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "Trend Micro Vision One (XDR) collects and correlates deep activity data across multiple vectors - email, endpoints, servers, cloud workloads, and networks - enabling a level of detection and investigation that is difficult or impossible to achieve with SIEM or individual point solutions."
+            }
+        ]
+    },
+    {
+        "id": "identity_mastercontrol",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/mastercontrol.jpg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "MasterControl Manufacturing Excellence is your partner in achieving manufacturing success"
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "Streamline Your Production with MasterControl Manufacturing Excellence: Elevate Quality and Efficiency!"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "MasterControl Manufacturing Excellence is a cutting-edge solution designed to streamline and optimize the entire manufacturing process. With advanced features like electronic batch records, automated workflows, and real-time data insights, it empowers manufacturers to increase productivity, ensure compliance, and reduce costs. "
+            }
+        ]
+    },
+    {
+        "id": "identity_entra_id",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/extra_id.jpg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "Microsoft Entra ID is a cloud-based identity and access management service that helps secure access to applications and resources for users."
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "Your Identity, Your Control: Navigating Microsoft Entra ID"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "Entra ID is a comprehensive identity and access management cloud solution that provides a robust set of capabilities to manage users and groups and help secure access to applications including Microsoft online services like Office 365 and a world of non-Microsoft SaaS applications."
+            }
+        ]
+    },
+    {
+        "id": "identity_clearview-crm",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/clearview-crm.jpeg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "ersonalize your customer experience with Clearview CRM - where clarity meets convenience"
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "Let ClearView CRM be your beacon in the commercial fog"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "Clearview CRM \u2014 a personalized customer management tool integrates seamlessly with your current business infrastructure. Our system allows you to expediently track, analyze and manage your customer interactions, leveraging insightful data to take necessary actions. With Clearview CRM, expect increased efficiency, stronger customer relationships leading to valuable business growth."
+            }
+        ]
+    },
+    {
+        "id": "identity_Oracle-Agile-PLM1",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/Oracle-Agile-PLM1.jpg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "Oracle Agile PLM empowers organizations to enhance collaboration, fuel innovation, and accelerate time-to-market."
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "Transform Your Product Lifecycle with Oracle Agile PLM: Your Path to Innovation and Efficiency"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "Oracle Agile PLM (Product Lifecycle Management) is a comprehensive solution designed to streamline and enhance every aspect of product development and management. Tailored for businesses across various industries, Agile PLM empowers organizations to innovate faster, collaborate more effectively, and deliver high-quality products to market while maintaining compliance and minimizing costs."
+            }
+        ]
+    },
+    {
+        "id": "identity_autodesk",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/autodesk.jpg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "Autodesk Construction Cloud empowers general contractors, specialty trades, designers and owners to drive better business outcomes."
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "Transforming Construction: Your All-in-One Solution with Autodesk Construction Cloud"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "Autodesk Construction Cloud is a comprehensive platform designed to enhance collaboration, efficiency, and project management in the construction industry. Seamlessly integrating design, planning, and field operations, it empowers teams to work together in real time, regardless of location."
+            }
+        ]
+    },
+    {
+        "id": "identity_hibob",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/hibob.jpg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "Meet Hibob, the dynamic HR platform designed for the modern workplace"
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "Hibob: Your Personalized People Platform for a Thriving Workplace"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "Hibob is your all-in-one HR platform that connects teams, streamlines processes, and fuels employee satisfaction.Experience a user-friendly interface that empowers employees to take charge of their own HR needs with easy access to personal information, benefits, and feedback. From seamless onboarding to performance management and employee engagement surveys, Hibob makes every step effortless, allowing you to focus on what truly matters\u2014your people."
+            }
+        ]
+    },
+    {
+        "id": "identity_veeam",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/veeam.jpeg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "Veeam Data Platform offers advanced monitoring and analytics, proactive alerting, and automated recovery testing to minimize downtime and data loss"
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "Veeam Data Platform: Unleashing Next-Gen Data Resilience"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "Veeam Data Platform is a comprehensive solution designed to provide robust data protection, backup, and recovery for businesses of all sizes. It seamlessly integrates backup, replication, and continuous data protection (CDP) to ensure your data is always secure and available."
+            }
+        ]
+    },
+    {
+        "id": "identity_fiix_ccms",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/fiix_ccms.jpg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "Embrace the future of maintenance management and transform the way you work with Fiix!"
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "Unleash Operational Excellence: Transform Maintenance with fiix CMMS by Rockwell Automation!"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "Fiix CMMS by Rockwell Automation\u2014a cutting-edge software solution designed to enhance efficiency, reduce downtime, and streamline operations. Fiix empowers organizations of all sizes to take control of their maintenance processes with user-friendly features and powerful functionality."
+            }
+        ]
+    },
+    {
+        "id": "identity_HS Sales Hub",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/hubspot.jpeg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "Supercharge your sales process with Sales Hub, a powerful and easy-to-use sales CRM"
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "Boost Your Sales Game with HubSpot Sales Hub: Your Personalized Sales Command Center!"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "HubSpot Sales Hub, an all-in-one sales software designed to streamline your sales process and boost team productivity. With powerful tools for pipeline management, email tracking, and automation, Sales Hub helps you nurture leads and close deals faster."
+            }
+        ]
+    },
+    {
+        "id": "identity_VivaEngage_logo-1",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/VivaEngage_logo-1.jpg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "Microsoft Viva Engage \u2014 where engagement meets excellence"
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "Elevate Your Workplace: Microsoft Viva Engage - Your Hub for Connection and Collaboration"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "Microsoft Viva Engage is an all-in-one platform designed to foster a vibrant workplace community. Imagine a space where every employee's voice is heard and valued. With Viva Engage, cultivate engagement, collaboration, and well-being seamlessly through personalized experiences that resonate with your team's unique culture"
+            }
+        ]
+    },
+    {
+        "id": "identity_viso_ai",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/viso_ai.jpg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "Viso AI empowers you to seamlessly integrate advanced analytics and machine learning into your workflows"
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "Viso AI: Your Personalized Path to Intelligent Insights"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "Viso Suite Platform, designed to suit dynamic business needs. Personalised to precision, this platform offers customised tech resources providing seamless integrations, optimized data management, and enhanced security. Streamline your business operations with impressive user interfaces and enjoy business analytics like never before. Explore the endless possibilities of your business transformation journey with our Viso Suite Platform."
+            }
+        ]
+    },
+    {
+        "id": "identity_adp_totalsource",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/adp_totalsource.jpeg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "ADP TotalSource is a comprehensive Human Capital Management (HCM) solution designed to streamline HR processes for businesses of all sizes."
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "ADP TotalSource: Your All-in-One HR Powerhouse \u2013 Tailored Solutions for Every Business Journey!"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "ADP TotalSource, a premier professional employer organization (PEO) that offers a complete suite of human resources services, tailored to meet the unique needs of your business. Designed for organizations of all sizes, TotalSource provides an all-in-one solution that streamlines HR processes, enhances employee experience, and promotes business growth."
+            }
+        ]
+    },
+    {
+        "id": "identity_ibm_maximo",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/ibm_maximo.jpg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "Unlock the Power of Asset Management with IBM Maximo Application Suite"
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "Your Ultimate Partner in Asset Excellence: IBM Maximo Suite"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "The IBM Maximo Application Suite is an all-encompassing, integrated solution designed to help organizations effectively manage their assets throughout their entire lifecycle. With its comprehensive capabilities, Maximo empowers businesses to enhance operational efficiency, reduce costs, and improve service delivery, making it the ultimate choice for enterprises across various industries."
+            }
+        ]
+    },
+    {
+        "id": "identity_SecondNature",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/SecondNature.jpeg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "Second Nature AI empowers organizations to harness the full potential of AI and stay ahead in a rapidly evolving marketplace."
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "Second Nature AI: Your Intelligent Companion for Everyday Decisions"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "Second Nature AI is an innovative platform that harnesses the power of artificial intelligence to enhance decision-making and automate routine tasks in various industries. By leveraging advanced machine learning algorithms, Second Nature AI provides real-time insights and predictive analytics, enabling businesses to optimize operations and drive growth."
+            }
+        ]
+    },
+    {
+        "id": "identity_hoostsuite",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>images/hoostsuite.jpg</img>"
+            },
+            {
+                "from": "assistant",
+                "value": "With Hootsuite, you can plan and publish content across multiple platforms, engage with your audience in real-time, and track your growth metrics to refine your strategy"
+            },
+            {
+                "from": "user",
+                "value": "Give me the title (in 25 characters) for this image of my product"
+            },
+            {
+                "from": "assistant",
+                "value": "Hootsuite: Your Ultimate Social Media Command Center"
+            },
+            {
+                "from": "user",
+                "value": "Give me the description (in 90 characters)for this image"
+            },
+            {
+                "from": "assistant",
+                "value": "Hootsuite, the all-in-one platform designed to manage, monitor, and amplify your online presence effortlessly. Tailored for marketers, business owners, and influencers alike, Hootsuite brings together all your social networks into one powerful dashboard. Schedule posts for optimal engagement, track performance with insightful analytics, and engage with your audience in real-time\u2014all from a single, user-friendly interface"
             }
         ]
     }
-]
+
+        ]
+

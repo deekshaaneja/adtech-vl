@@ -1,3 +1,4 @@
+import datetime
 import os
 import json
 
@@ -54,16 +55,16 @@ def combine_json_files_from_directory(directory, image_folder):
 
 
 # Path to the directory containing JSON files
-directory = '/Users/daneja/Desktop/hackathon/project/'
+directory = '/Users/daneja/Downloads/project_2/'
 
 # Path to the folder where images will be stored
-image_folder = '/Users/daneja/Desktop/hackathon/project/'  # Set your new image folder path here
+image_folder = '/Users/daneja/Downloads/project_2/'  # Set your new image folder path here
 
 # Combine the JSON files from the directory
 combined_result = combine_json_files_from_directory(directory, image_folder)
 
 # Save the combined result to a new file
-output_file = 'combined_conversations.json'
+output_file = f'combined_conversations_{datetime.date.today()}.json'
 with open(output_file, 'w') as f:
     json.dump(combined_result, f, indent=4)
 
