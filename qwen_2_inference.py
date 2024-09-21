@@ -114,10 +114,17 @@ if __name__ == '__main__':
     q1 = "Give me the title (in 25 characters) for personalized advertisement"
     q2 = "Give me the description (in 90 characters) for personalized advertisement"
     q3 = "Give me the keywords for advertisement of this product"
-    print(f"******************************DEFAULT MODEL******************************************")
-    print(infer(url, [q1, q2, q3]))
-    print(f"*********************************NEW MODEL*******************************************")
-    print(infer_new_model(url, [q1, q2, q3]))
+    questions = [q1, q2, q3]
+    print("******************************DEFAULT MODEL******************************************")
+
+    responses = infer(url, questions)
+    for question, response in zip(questions, responses):
+        print(f"{question} \n {response}")
+    print("*********************************NEW MODEL*******************************************")
+
+    responses = infer_new_model(url, questions)
+    for question, response in zip(questions, responses):
+        print(f"{question} \n {response}")
 
 
 
