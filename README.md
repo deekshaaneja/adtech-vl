@@ -18,7 +18,6 @@ This project is a web application that allows users to upload images and get pre
 ### Prerequisites
 - Python 3.8 or above
 - pip (Python package manager)
-- GPU (Optional but recommended for faster inference)
 
 ### Installation Steps
 
