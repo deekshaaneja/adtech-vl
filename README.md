@@ -45,14 +45,24 @@ This project is a web application that allows users to upload images and get pre
    transformers
    Pillow
    ```
+4. **Training Qwen2 VL**
+   ```
+   sh scripts/finetune_lora_single_gpu.sh
+   ```
+* The model finetuning would not create `preprocessor_config.json` and `chat_template.json`. They can be downloaded from https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct/tree/main
+  ```
+   cd qwen2_vl_trained_model/output/
+   wget https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct/resolve/main/preprocessor_config.json
+   wget https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct/resolve/main/chat_template.json
+  ```
 
-4. **Prepare the Qwen2 VL model:**
+5. **Prepare the Qwen2 VL model:**
    Make sure your fine-tuned Qwen2 VL model is accessible. Either place it in a local directory or load it from a model hub. Update the model loading path in the `app.py` file:
    ```python
    model = Qwen2VLForConditionalGeneration.from_pretrained('path_to_your_trained_model')
    ```
 
-5. **Run the application:**
+6. **Run the application:**
    ```bash
    streamlit run app.py
    ```
