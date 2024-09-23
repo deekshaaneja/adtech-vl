@@ -22,7 +22,7 @@ IGNORE_TOKEN_ID = LabelSmoother.ignore_index
 
 @dataclass
 class ModelArguments:
-    model_name_or_path: Optional[str] = field(default="Qwen/Qwen2-VL-2B-Instruct")
+    model_name_or_path: Optional[str] = field(default="Qwen/Qwen2-VL-7B-Instruct")
 
 
 @dataclass
@@ -259,7 +259,7 @@ def make_supervised_data_module(
 def train():
     global local_rank
 
-    output_dir = "/home/ubuntu/deeksha/db-adtech-vl/qwen2_vl_model/output"
+    output_dir = "qwen2_vl_trained_model/output"
     parser = transformers.HfArgumentParser(
         (ModelArguments, DataArguments, TrainingArguments, LoraArguments)
     )

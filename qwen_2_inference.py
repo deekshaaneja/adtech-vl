@@ -13,7 +13,7 @@ args=parser.parse_args()
 
 def get_trained_model():
     try:
-        trained_model_path = "/home/ubuntu/deeksha/db-adtech-vl/qwen2_vl_model/output"
+        trained_model_path = "qwen2_vl_trained_model/output"
 
         # Load your fine-tuned model and processor
         model = Qwen2VLForConditionalGeneration.from_pretrained(
