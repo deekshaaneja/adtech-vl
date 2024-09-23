@@ -131,7 +131,7 @@ def infer(url, q_list, model=None, processor=None):
 
 if __name__ == '__main__':
     print(f"Predicting for image: {args.image}")
-    trained_model, trained_processor = get_trained_model()
+
     # default_model, default_processor = get_default_model()
     url = args.image
     q1 = "Give me the title (in 25 characters) for personalized advertisement"
@@ -145,7 +145,7 @@ if __name__ == '__main__':
         print(f"{question} \n {response}")
     torch.cuda.empty_cache()
     print("*********************************NEW MODEL*******************************************")
-
+    trained_model, trained_processor = get_trained_model()
     responses = infer_new_model(url, questions, trained_model, trained_processor)
     for question, response in zip(questions, responses):
         print(f"{question} \n {response}")
