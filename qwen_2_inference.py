@@ -87,7 +87,7 @@ def infer(url, q_list, model=None, processor=None):
     responses = []
     try:
         model = Qwen2VLForConditionalGeneration.from_pretrained(
-            "Qwen/Qwen2-VL-7B-Instruct", torch_dtype="auto", device_map="auto"
+            "Qwen/Qwen2-VL-7B-Instruct-GPTQ-Int4", torch_dtype="auto", device_map="auto"
         )
         processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-7B-Instruct")
         for q in q_list:
