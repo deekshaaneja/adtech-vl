@@ -139,6 +139,7 @@ if __name__ == '__main__':
     responses = infer(url, questions, default_model, default_processor)
     for question, response in zip(questions, responses):
         print(f"{question} \n {response}")
+    torch.cuda.empty_cache()
     print("*********************************NEW MODEL*******************************************")
 
     responses = infer_new_model(url, questions, trained_model, trained_processor)
