@@ -1,4 +1,4 @@
-# Vision-Language (VL) Model UI (Based on Qwen2 VL)
+# DB Vision-Language (VL) Model (Based on Qwen2 VL)
 
 This project is a web application that allows users to upload images and get predictions from a Vision-Language (VL) model fine-tuned on custom images. The model is based on **Qwen2 VL** and has been trained on data stored in `combined_conversations.json`.
 
