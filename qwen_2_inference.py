@@ -11,105 +11,122 @@ parser.add_argument("--image", help="Path of the image")
 
 args=parser.parse_args()
 
+def get_trained_model():
+    try:
+        trained_model_path = "/home/ubuntu/deeksha/db-adtech-vl/qwen2_vl_model/output"
 
-def infer_new_model(url, q_list):
+        # Load your fine-tuned model and processor
+        model = Qwen2VLForConditionalGeneration.from_pretrained(
+            trained_model_path,
+            torch_dtype="auto",
+            device_map="auto"
+        )
+        processor = AutoProcessor.from_pretrained(trained_model_path)
+        return model, processor
+    except Exception as e:
+        print(f"{type(e).__name__} at line {e.__traceback__.tb_lineno} of {__file__}: {e}")
+
+
+def get_default_model():
+    try:
+        model = Qwen2VLForConditionalGeneration.from_pretrained(
+            "Qwen/Qwen2-VL-7B-Instruct", torch_dtype="auto", device_map="auto"
+        )
+        processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-7B-Instruct")
+        return model, processor
+    except Exception as e:
+        print(f"{type(e).__name__} at line {e.__traceback__.tb_lineno} of {__file__}: {e}")
+
+
+
+def infer_new_model(url, q_list, model, processor):
     responses = []
-    trained_model_path = "/home/ubuntu/deeksha/db-adtech-vl/qwen2_vl_model/output"
-
-    # Load your fine-tuned model and processor
-    model = Qwen2VLForConditionalGeneration.from_pretrained(
-        trained_model_path,
-        torch_dtype="auto",
-        device_map="auto"
-    )
-    processor = AutoProcessor.from_pretrained(trained_model_path)
-    print("processot loaded ====== ")
-    # 1st dialogue turn
-    for q in q_list:
-        messages = [
-            {
-                "role": "user",
-                "content": [
-                    {
-                        "type": "image",
-                        "image": url,
-                    },
-                    {"type": "text", "text": q},
-                ],
-            }
-        ]
-        text = processor.apply_chat_template(
-            messages, tokenize=False, add_generation_prompt=True
-        )
-        image_inputs, video_inputs = process_vision_info(messages)
-        inputs = processor(
-            text=[text],
-            images=image_inputs,
-            videos=video_inputs,
-            padding=True,
-            return_tensors="pt",
-        )
-        inputs = inputs.to("cuda")
-        generated_ids = model.generate(**inputs, max_new_tokens=128)
-        generated_ids_trimmed = [
-            out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
-        ]
-        output_text = processor.batch_decode(
-            generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
-        )
-        responses.append(output_text)
-
+    try:
+        for q in q_list:
+            messages = [
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "image",
+                            "image": url,
+                        },
+                        {"type": "text", "text": q},
+                    ],
+                }
+            ]
+            text = processor.apply_chat_template(
+                messages, tokenize=False, add_generation_prompt=True
+            )
+            image_inputs, video_inputs = process_vision_info(messages)
+            inputs = processor(
+                text=[text],
+                images=image_inputs,
+                videos=video_inputs,
+                padding=True,
+                return_tensors="pt",
+            )
+            inputs = inputs.to("cuda")
+            generated_ids = model.generate(**inputs, max_new_tokens=128)
+            generated_ids_trimmed = [
+                out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
+            ]
+            output_text = processor.batch_decode(
+                generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
+            )
+            responses.append(output_text)
+    except Exception as e:
+        print(f"{type(e).__name__} at line {e.__traceback__.tb_lineno} of {__file__}: {e}")
     return responses
 
 
-def infer(url, q_list):
+def infer(url, q_list, model, processor):
+
     responses = []
-    # Note: The default behavior now has injection attack prevention off.
-    model = Qwen2VLForConditionalGeneration.from_pretrained(
-        "Qwen/Qwen2-VL-7B-Instruct", torch_dtype="auto", device_map="auto"
-    )
-    processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-7B-Instruct")
+    try:
+        for q in q_list:
+            messages = [
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "image",
+                            "image": url,
+                        },
+                        {"type": "text", "text": q},
+                    ],
+                }
+            ]
+            text = processor.apply_chat_template(
+                messages, tokenize=False, add_generation_prompt=True
+            )
+            image_inputs, video_inputs = process_vision_info(messages)
+            inputs = processor(
+                text=[text],
+                images=image_inputs,
+                videos=video_inputs,
+                padding=True,
+                return_tensors="pt",
+            )
+            inputs = inputs.to("cuda")
+            generated_ids = model.generate(**inputs, max_new_tokens=128)
+            generated_ids_trimmed = [
+                out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
+            ]
+            output_text = processor.batch_decode(
+                generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
+            )
+            responses.append(output_text)
+    except Exception as e:
+        print(f"{type(e).__name__} at line {e.__traceback__.tb_lineno} of {__file__}: {e}")
 
-
-    # 1st dialogue turn
-    for q in q_list:
-        messages = [
-            {
-                "role": "user",
-                "content": [
-                    {
-                        "type": "image",
-                        "image": url,
-                    },
-                    {"type": "text", "text": q},
-                ],
-            }
-        ]
-        text = processor.apply_chat_template(
-            messages, tokenize=False, add_generation_prompt=True
-        )
-        image_inputs, video_inputs = process_vision_info(messages)
-        inputs = processor(
-            text=[text],
-            images=image_inputs,
-            videos=video_inputs,
-            padding=True,
-            return_tensors="pt",
-        )
-        inputs = inputs.to("cuda")
-        generated_ids = model.generate(**inputs, max_new_tokens=128)
-        generated_ids_trimmed = [
-            out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
-        ]
-        output_text = processor.batch_decode(
-            generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
-        )
-        responses.append(output_text)
     return responses
 
 
 if __name__ == '__main__':
     print(f"Predicting for image: {args.image}")
+    trained_model, trained_processor = get_trained_model()
+    default_model, default_processor = get_default_model()
     url = args.image
     q1 = "Give me the title (in 25 characters) for personalized advertisement"
     q2 = "Give me the description (in 90 characters) for personalized advertisement"
@@ -117,12 +134,12 @@ if __name__ == '__main__':
     questions = [q1, q2, q3]
     print("******************************DEFAULT MODEL******************************************")
 
-    responses = infer(url, questions)
+    responses = infer(url, questions, default_model, default_processor)
     for question, response in zip(questions, responses):
         print(f"{question} \n {response}")
     print("*********************************NEW MODEL*******************************************")
 
-    responses = infer_new_model(url, questions)
+    responses = infer_new_model(url, questions, trained_model, trained_processor)
     for question, response in zip(questions, responses):
         print(f"{question} \n {response}")
 
