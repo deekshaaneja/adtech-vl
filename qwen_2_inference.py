@@ -2,6 +2,8 @@ from transformers import Qwen2VLForConditionalGeneration, AutoTokenizer, AutoPro
 from qwen_vl_utils import process_vision_info
 #import torch
 #torch.manual_seed(1234)
+import torch
+
 
 import argparse
 
@@ -142,6 +144,7 @@ if __name__ == '__main__':
     responses = infer_new_model(url, questions, trained_model, trained_processor)
     for question, response in zip(questions, responses):
         print(f"{question} \n {response}")
+    torch.cuda.empty_cache()
 
 
 
