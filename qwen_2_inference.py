@@ -82,10 +82,14 @@ def infer_new_model(url, q_list, model, processor):
     return responses
 
 
-def infer(url, q_list, model, processor):
+def infer(url, q_list, model=None, processor=None):
 
     responses = []
     try:
+        model = Qwen2VLForConditionalGeneration.from_pretrained(
+            "Qwen/Qwen2-VL-7B-Instruct", torch_dtype="auto", device_map="auto"
+        )
+        processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-7B-Instruct")
         for q in q_list:
             messages = [
                 {
@@ -134,12 +138,12 @@ if __name__ == '__main__':
     q2 = "Give me the description (in 90 characters) for personalized advertisement"
     q3 = "Give me the keywords for advertisement of this product"
     questions = [q1, q2, q3]
-    # print("******************************DEFAULT MODEL******************************************")
-    #
-    # responses = infer(url, questions, default_model, default_processor)
-    # for question, response in zip(questions, responses):
-    #     print(f"{question} \n {response}")
-    # torch.cuda.empty_cache()
+    print("******************************DEFAULT MODEL******************************************")
+
+    responses = infer(url, questions)
+    for question, response in zip(questions, responses):
+        print(f"{question} \n {response}")
+    torch.cuda.empty_cache()
     print("*********************************NEW MODEL*******************************************")
 
     responses = infer_new_model(url, questions, trained_model, trained_processor)
