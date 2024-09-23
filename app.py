@@ -2,10 +2,11 @@ import streamlit as st
 from PIL import Image
 import io
 
-from qwen_2_inference import infer_new_model
+from qwen_2_inference import infer_new_model, get_trained_model, get_default_model
 
 st.title("VL Model Inference")
-
+trained_model, trained_processor = get_trained_model()
+default_model, default_processor = get_default_model()
 # Upload an image
 uploaded_image = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
@@ -21,6 +22,6 @@ if uploaded_image is not None:
 
     # Send image to backend for prediction
     if st.button("Get Prediction"):
-        response = infer_new_model(image, questions)  # Call your model's inference function
+        response = infer_new_model(image, questions, trained_model, trained_processor)  # Call your model's inference function
         st.write("Model Output:", response)
 

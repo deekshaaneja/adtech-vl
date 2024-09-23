@@ -22,7 +22,7 @@ IGNORE_TOKEN_ID = LabelSmoother.ignore_index
 
 @dataclass
 class ModelArguments:
-    model_name_or_path: Optional[str] = field(default="Qwen/Qwen2-VL-7B-Instruct")
+    model_name_or_path: Optional[str] = field(default="Qwen/Qwen2-VL-2B-Instruct")
 
 
 @dataclass
