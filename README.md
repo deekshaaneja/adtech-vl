@@ -46,15 +46,14 @@ This project is a web application that allows users to upload images and get pre
    Pillow
    ```
 4. **Training Qwen2 VL**
-
-```
-sh scripts/finetune_lora_single_gpu.sh
-```
+   ```
+   sh scripts/finetune_lora_single_gpu.sh
+   ```
 * The model finetuning would not create `preprocessor_config.json` and `chat_template.json`. They can be downloaded from https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct/tree/main
   ```
-  cd qwen2_vl_trained_model/output/
-  wget https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct/blob/main/chat_template.json
-  wget https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct/blob/main/preprocessor_config.json
+   cd qwen2_vl_trained_model/output/
+   wget https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct/resolve/main/preprocessor_config.json
+   wget https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct/resolve/main/chat_template.json
   ```
 
 5. **Prepare the Qwen2 VL model:**
